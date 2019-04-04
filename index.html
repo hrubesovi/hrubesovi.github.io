@@ -64,6 +64,14 @@
             border: 2px solid #333;
             padding: .9em .9em;
         }
+        .btn-cancel {
+            cursor: pointer;
+            width: auto;
+            background: transparent;
+            text-decoration: underline;
+            color: #333;
+            border: 0;
+        }
         .btn-submit:hover {
             background: #333;
             color: #fff;
@@ -113,14 +121,15 @@
         <form action="https://formsubmit.co/5266ca5c7fdad007bdfdf13f325aae8d" method="POST">
             <div class="form__field">
                 <div class="form__label"><label for="rsvp-name">jméno</label></div>
-                <div><input class="text-input" type="text" name="name" id="rsvp-name" placeholder="Jméno a Příjmení"></div>
+                <div><input class="text-input" type="text" name="name" id="rsvp-name" placeholder="Jméno a Příjmení" required></div>
             </div>
             <div class="form__field">
                 <div class="form__label"><label for="rsvp-email">e-mail</label></div>
-                <div><input class="text-input" type="email" name="email" id="rsvp-email" placeholder="E-mail"></div>
+                <div><input class="text-input" type="email" name="email" id="rsvp-email" placeholder="E-mail" required></div>
             </div>
             <div class="form__field">
                 <input class="btn-submit" type="submit" value="Přijedu!">
+                <input class="btn-cancel" type="submit" value="Bohužel to nedám :(">
             </div>
         </form>
         <p class="rsvp__disclaimer">* Osobní údaje nekrademe, jen si je dovolíme využít pro další komunikaci ohledně detailů našeho velkého dne :)</p>
