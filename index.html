@@ -35,8 +35,10 @@
             width: 350px
         }
         .form__label {
-            margin-bottom: -15px;
-            opacity: 0;
+            display: none;
+        }
+        .form__label--visible {
+            display: block;
         }
         .form__field {
             text-align: center;
@@ -56,6 +58,10 @@
         .text-input:hover, .text-input:focus {
             border-bottom: 2px solid #111;
         }
+        .checkbox-input {
+            margin: 1em .5em 2em 0;
+            border: 1px solid #333;
+        }
         .btn-submit {
             cursor: pointer;
             width: auto;
@@ -63,14 +69,6 @@
             color: #333;
             border: 2px solid #333;
             padding: .9em .9em;
-        }
-        .btn-cancel {
-            cursor: pointer;
-            width: auto;
-            background: transparent;
-            text-decoration: underline;
-            color: #333;
-            border: 0;
         }
         .btn-submit:hover {
             background: #333;
@@ -128,8 +126,13 @@
                 <div><input class="text-input" type="email" name="email" id="rsvp-email" placeholder="E-mail" required></div>
             </div>
             <div class="form__field">
-                <input class="btn-submit" type="submit" value="Přijedu!">
-                <input class="btn-cancel" type="submit" value="Bohužel to nedám :(">
+                <div class="form__label form__label--visible">
+                    <label for="rsvp-status">
+                        <input class="checkbox-input" type="checkbox" name="rsvp-status" id="rsvp-status" checked>Přijedu!</label>
+                </div>
+            </div>
+            <div class="form__field">
+                <input class="btn-submit" type="submit" value="RSVP">
             </div>
         </form>
         <p class="rsvp__disclaimer">* Osobní údaje nekrademe, jen si je dovolíme využít pro další komunikaci ohledně detailů našeho velkého dne :)</p>
