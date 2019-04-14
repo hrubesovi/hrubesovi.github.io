@@ -55,6 +55,16 @@
 <body>
     <h1>Oops</h1>
     <p>Nic tu není...ale nevadí, příště to třeba vyjde.</p>
+
+    <script>
+        window.ga = function () { ga.q.push(arguments) };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-138256626-1', 'auto');
+        ga('set', 'transport', 'beacon');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 </html>
 <!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
