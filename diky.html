@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <title>Díky - Štěpánka & Jan</title>
+    <meta name="description" content="Vítej na svatebních stránkách Štěpánky a Jana, kde můžeš potvrdit svou účast a být u toho s nimi.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="theme-color" content="#fafafa">
+
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+        }
+        section {
+            width: 100%;
+        }
+        .hero__img {
+            width: 100%;
+            border-bottom: 1px solid #fae6d3;
+        }
+        .rsvp {
+            padding: 5em 10%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .info {
+            display: flex;
+            padding: 5em 0;
+            background: #333;
+        }
+        .info__col {
+            flex: 1;
+            text-align: center;
+            color: #fff;
+        }
+        .info__col h3 {
+            color: #aaa;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+        .info__col a {
+            color: #bbb;
+        }
+        .col__text {
+            font-size: 1.4em;
+        }
+        .map__canvas {
+            background: url("./img/map-rsvp.png") 50% 50%;
+            background-size: cover;
+            height: 330px;
+        }
+    </style>
+</head>
+
+<body>
+<section class="hero">
+    <img class="hero__img" src="img/bg-rsvp.jpg" alt="RSVP">
+</section>
+<section class="rsvp">
+    <h1>Díky, to je prozatím všechno.</h1>
+    <p>Až budem vědět víc, budeš taky vědět.</p>
+</section>
+<section class="info">
+    <div class="info__col">
+        <h3>DATUM</h3>
+        <p class="col__text">Sobota 7. 9. 2019</p>
+        <p><a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MTNxcnE2M2s4YTZnOTdoNmZoOGR0dDkyZXQgc3ZhdGJhQGhydWJlc292aS5jb20&tmsrc=svatba%40hrubesovi.com" target="_blank" rel="noopener">+ Přidat do kalendáře</a></p>
+    </div>
+    <div class="info__col">
+        <h3>MÍSTO</h3>
+        <p class="col__text">Penzion Na Lukách</p>
+        <p><a href="https://maps.google.com/?cid=15706778256388134386" target="_blank" rel="noopener">→ Google Maps</a></p>
+    </div>
+</section>
+<section class="map">
+    <div class="map__canvas"></div>
+</section>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () { ga.q.push(arguments) };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
