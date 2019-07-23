@@ -22,40 +22,62 @@
             width: 100%;
             border-bottom: 1px solid #fae6d3;
         }
-        .harmonogram {
+        .rsvp {
             padding: 5em 10%;
             box-sizing: border-box;
             text-align: center;
         }
-        .harmonogram p {
-            font-size: 1.1em;
-        }
-        .harmonogram a {
-            color: #444;
-        }
-        .table {
-            margin: 2em auto 0;
+        .form {
+            font-family: sans-serif;
+            display: block;
             padding: 0;
-            width: 100%;
-            max-width: 700px;
+            margin: 0 auto;
+            width: 350px
         }
-        .table li {
-            list-style: none;
-            text-align: right;
-            position: relative;
-            font-size: 1.5em;
-            padding: 1em 1em 0.5em;
+        .form__label {
+            display: none;
+        }
+        .form__label--visible {
+            display: block;
+        }
+        .form__field {
+            text-align: center;
+            width: 100%;
+        }
+        .text-input {
+            background: transparent;
+            box-sizing: border-box;
+            padding: .5em .5em .5em .5em;
             margin: 1em 0 2em 0;
             border: 0;
-            border-bottom: 2px solid #666;
+            border-bottom: 2px solid #909090;
+            width: 100%;
+            outline: 0;
+            transition: border-bottom-color;
         }
-        .table li:hover, .table li:focus {
-            border-bottom: 2px solid #000;
+        .text-input:hover, .text-input:focus {
+            border-bottom: 2px solid #111;
         }
-        .table__time {
-            float: left;
-            font-size: 1em;
-            color: #777;
+        .checkbox-input {
+            margin: 1em .5em 2em 0;
+            border: 1px solid #333;
+        }
+        .btn-submit {
+            cursor: pointer;
+            width: auto;
+            background: transparent;
+            color: #333;
+            border: 2px solid #333;
+            padding: .9em .9em;
+        }
+        .btn-submit:hover {
+            background: #333;
+            color: #fff;
+        }
+        .rsvp__disclaimer {
+            margin-top: 4em;
+            font-size: .9em;
+            color: #666;
         }
         .info {
             display: flex;
@@ -90,21 +112,29 @@
 <section class="hero">
     <img class="hero__img" src="img/bg-rsvp.jpg" alt="RSVP">
 </section>
-<section class="harmonogram">
-    <h1 id="harmonogram">Harmonogram</h1>
-    <p><a href="./harmonogram-pa.html#harmonogram"><< Pátek</a> | <strong>Sobota</strong> | <a href="./harmonogram-ne.html#harmonogram">Neděle >></a></p>
-    <div>
-        <ul class="table">
-            <li><span class="table__time">9:00</span> Budíček & Rozcvička</li>
-            <li><span class="table__time">9:30-10:30</span>Snídaně</li>
-            <li><span class="table__time">10:30-13:30</span>Volná zábava</li>
-            <li><span class="table__time">13:30-14:20</span>Něco na zub</li>
-            <li><span class="table__time">14:30-16:00</span>Obřad, focení a jiné</li>
-            <li><span class="table__time">16:00-16:30</span>Přípitek a příjedek</li>
-            <li><span class="table__time">16:30-18:30</span>Raut, hudba a kecy</li>
-            <li><span class="table__time">18:30-20:00</span>Zábava na účet svatebčanů</li>
-            <li><span class="table__time">20:00-...</span>Hudba</li>
-        </ul>
+<section class="rsvp">
+    <h1>Přijdeš s námi oslavit náš velký den?</h1>
+    <div class="form">
+        <form action="https://go-api-237519.appspot.com" method="POST">
+            <div class="form__field">
+                <div class="form__label"><label for="rsvp-name">jméno</label></div>
+                <div><input class="text-input" type="text" name="name" id="rsvp-name" placeholder="Jméno a Příjmení" required></div>
+            </div>
+            <div class="form__field">
+                <div class="form__label"><label for="rsvp-email">e-mail</label></div>
+                <div><input class="text-input" type="email" name="email" id="rsvp-email" placeholder="E-mail" required></div>
+            </div>
+            <div class="form__field">
+                <div class="form__label form__label--visible">
+                    <label for="rsvp-status">
+                        <input class="checkbox-input" type="checkbox" name="rsvp-status" id="rsvp-status" value="1" checked>Přijedu!</label>
+                </div>
+            </div>
+            <div class="form__field">
+                <input class="btn-submit" type="submit" value="RSVP">
+            </div>
+        </form>
+        <p class="rsvp__disclaimer">* Osobní údaje nekrademe, jen si je dovolíme využít pro další komunikaci ohledně detailů našeho velkého dne :)</p>
     </div>
 </section>
 <section class="info">
